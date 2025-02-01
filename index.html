@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 30px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        .mcon{
+            border: inset;
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            background-color: rgb(242, 240, 234);
+            margin-top: 60px;
+            margin-left: 300px;
+            padding: 20px;
+        }
+        
+        #yy{
+            /* border: 2px solid red; */
+            text-align: center;
+            background-color: black;
+            color: white;
+            /* border-radius: 10px; */
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        #dd{
+            /* border: 2px solid black; */
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.781);
+            color: white;
+            /* border-radius: 10px; */
+            width: 48%;
+            display: inline-block;
+    
+    
+        }
+        #da{
+            display: inline-block;
+            /* border: 2px solid black; */
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.796);
+            color: white;
+            /* border-radius: 10px; */
+            width: 48%;
+            margin-top:10px ;
+    
+        }
+
+        #mo{
+            /* border: 2px solid black; */
+            text-align: center;
+            background-color: black;
+            color: white;
+            /* border-radius: 10px; */
+            width: 100%;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="mcon">
+         <div class="ccon" id="yy">2024</div>
+         <div class="ccon" id="dd">30</div>
+         <div class="ccon" id="da">sun</div>
+         <div class="ccon" id="mo">OCT</div>
+    </div>
+         <script>
+             let today=new Date()
+             let yyy=document.getElementById('yy')
+             let ddd=document.getElementById('dd')
+             let daa=document.getElementById('da')
+             let moo=document.getElementById('mo')
+    const wd=['mon','tue','wed','thr','fri','sat','sun']
+    const mmm=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+    let yearr=today.getFullYear()
+    let datee=today.getDate()
+    let dayy=wd[(today.getDay())-1]
+    let monthh=mmm[(today.getMonth())]
+    yyy.innerHTML=yearr
+    ddd.innerHTML=datee
+    daa.innerHTML=dayy
+    moo.innerHTML=monthh       
+
+         </script>
+</body>
+</html>
